@@ -1,0 +1,28 @@
+ALGORITHM CompterPhrase
+VAR
+    // Déclaration des variables
+    phrase:string
+    longueurPhrase, nombreMots, nombreVoyelles: entiers
+BEGIN
+    // Initialisation des compteurs
+    longueurPhrase <- 0
+    nombreMots <- 0
+    nombreVoyelles <- 0
+    // Lecture de la phrase
+    Écrire "salut c'est yanaise. "
+    Lire phrase
+    // Parcourir chaque caractère de la phrase
+    Pour chaque caractère c dans phrase Faire
+    // Incrémenter le compteur de longueur de la phrase
+    longueurPhrase <- longueurPhrase + 1
+
+    // Si le caractère est un espace, incrémenter le compteur de mots
+    Si c = ' ' Alors
+    nombreMots <- nombreMots + 1
+    Fin Si
+    // Si le caractère est une voyelle (a, e, i, o, u, y), incrémenter le compteur de voyelles
+    Si c est une voyelle Alors
+    nombreVoyelles <- nombreVoyelles + 1
+    Fin Si
+
+END
